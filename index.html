@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
+        integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/all.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">商務控制後台</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link active" aria-current="page" href="#">首頁</a>
+                    <a class="nav-link" href="list.html">列表</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid main mt-4">
+        <div class="row">
+            <div class="col-lg-3 col-6">
+                <div class="card h-100">
+                    <div class="card-body d-flex align-items-center px-5">
+                        <div><i class="fas fa-money-check-alt fa-3x text-secondary d-none d-sm-block"></i></div>
+                        <div class="text-center w-100">
+                            <div class="h5">今日營收</div>
+                            <div class="h3">193,000</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-6">
+                <div class="card h-100">
+                    <div class="card-body d-flex align-items-center px-5">
+                        <div><i class="fas fa-shopping-basket fa-3x text-secondary d-none d-sm-block"></i></div>
+                        <div class="text-center w-100">
+                            <div class="h5">訂單數</div>
+                            <div class="display-4">108</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-6">
+                <div class="card h-100">
+                    <div class="card-body d-flex align-items-center px-5">
+                        <div><i class="fas fa-user-friends fa-3x text-secondary d-none d-sm-block"></i></div>
+                        <div class="text-center w-100">
+                            <div class="h5">會員增加</div>
+                            <div class="display-4">50</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-6">
+                <div class="card h-100">
+                    <div class="card-body d-flex align-items-center px-5">
+                        <div><i class="fas fa-dumpster fa-3x text-secondary d-none d-sm-block"></i></div>
+                        <div class="text-center w-100">
+                            <div class="h5">待出貨數</div>
+                            <div class="display-4">55</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section>
+            <div class="row mt-4">
+                <div class="col-lg-8">
+                    <div class="card">
+                        <div class="card-body d-flex align-items-center">
+                            <div class="col-8"><canvas id="myChart"></canvas></div>
+                            <div class="col-4">
+                                <div class="h5">Describe</div>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut cumque reiciendis
+                                    incidunt
+                                    repellendus et eaque facilis earum labore quisquam aperiam vel quam atque ipsam
+                                    dolorem,
+                                    veritatis accusamus id impedit itaque?</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card h-100">
+                        <div class="card-body d-flex align-items-center">
+                            <canvas id="myChart2"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="card mt-4">
+            <div class="card-header">表單</div>
+            <div class="card-body">
+                <div class="d-flex justify-content-between">
+                    <div class="form-inline">
+                        <div class="form-group">
+                            <label for="month" class="sr-only">月份</label>
+                            <select name="month" id="month" class="form-control form-control-sm">
+                                <option value="9">9月</option>
+                                <option value="10">10月</option>
+                                <option value="11">11月</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div>
+                        <a href="#" class="btn btn-outline-secondary btn-sm">下載報表</a>
+                        <a href="#" class="btn btn-outline-secondary btn-sm">訂單管理</a>
+                    </div>
+
+                </div>
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th width='50'>日期</th>
+                            <th>訂單數</th>
+                            <th>退貨數</th>
+                            <th>出貨數</th>
+                            <th>有問題貨品</th>
+                            <th width='120'>營業額</th>
+                            <th width='120'>淨利潤</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>9/1</td>
+                            <td>300</td>
+                            <td>1</td>
+                            <td>200</td>
+                            <td>3</td>
+                            <td>25,000</td>
+                            <td>10,500</td>
+                        </tr>
+                        <tr>
+                            <td>9/1</td>
+                            <td>300</td>
+                            <td>1</td>
+                            <td>200</td>
+                            <td>3</td>
+                            <td>5,000</td>
+                            <td>3,500</td>
+                        </tr>
+                        <tr>
+                            <td>9/1</td>
+                            <td>300</td>
+                            <td>1</td>
+                            <td>200</td>
+                            <td>3</td>
+                            <td>25,000</td>
+                            <td>10,500</td>
+                        </tr>
+                        <tr>
+                            <td>9/1</td>
+                            <td>300</td>
+                            <td>1</td>
+                            <td>200</td>
+                            <td>3</td>
+                            <td class="text-right">20,000</td>
+                            <td class="text-right">9,500</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="5">總營業額</td>
+                            <td colspan="2">75,000</td>
+                        </tr>
+                        <tr>
+                            <td colspan="6">總利潤</td>
+                            <td>34,000</td>
+                        </tr>
+                    </tfoot>
+                </table>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script src="js/all.js"></script>
+</body>
+
+</html>

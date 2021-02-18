@@ -62,22 +62,27 @@
                         <td>已出貨</td>
                         <td>$1,500</td>
                         <td>
-                            <div class="btn-group btn-group-sm" role="group" aria-label="Button group with nested dropdown">
-                                <button type="button" class="btn btn-outline-secondary">編輯</button>
+                            <div class="btn-group btn-group-sm" role="group"
+                                aria-label="Button group with nested dropdown">
+                                <button type="button" class="btn btn-outline-secondary" data-bs-toggle="modal" data-title="編輯" data-bs-target="#editBackdrop">編輯</button>
                                 <button type="button" class="btn btn-outline-secondary">查看</button>
-                              
+
                                 <div class="btn-group" role="group">
-                                  <button id="btnGroupDrop1" type="button" class="btn btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                                    ...
-                                  </button>
-                                  <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-                                    <li><a class="dropdown-item" href="#">操作記錄</a></li>
-                                    <li><a class="dropdown-item" href="#">資料匯出</a></li>
-                                    <li><hr class="dropdown-devider"></li>
-                                    <li><a class="dropdown-item text-danger" href="#">刪除</a></li>
-                                  </ul>
+                                    <button id="btnGroupDrop1" type="button"
+                                        class="btn btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        ...
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                                        <li><a class="dropdown-item" href="#">操作記錄</a></li>
+                                        <li><a class="dropdown-item" href="#">資料匯出</a></li>
+                                        <li>
+                                            <hr class="dropdown-devider">
+                                        </li>
+                                        <li><a class="dropdown-item text-danger" href="#">刪除</a></li>
+                                    </ul>
                                 </div>
-                              </div>
+                            </div>
                         </td>
                     </tr>
                     <!-- <tr>
@@ -96,11 +101,39 @@
             </table>
         </div>
     </div>
+    <!-- Modal -->
+    <div class="modal fade" id="editBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Understood</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
     <script src="js/all.js"></script>
+    <script>
+        let editBackdrop = document.getElementById('editBackdrop');
+        editBackdrop.addEventListener('show.bs.modal', function(e){
+            let btn = event.relatedTarget;
+            let reci = btn.getAttribute('data-title');
+            let modalTitle = editBackdrop.querySelector('.modal-title')
+        })
+
+    </script>
 </body>
 
 </html>

@@ -125,68 +125,199 @@
                 </div>
                 <div class="table-responsive">
                     <table class="table table-hover">
-                    <thead>
-                        <tr>
-                            <th width='50'>日期</th>
-                            <th>訂單數</th>
-                            <th>退貨數</th>
-                            <th>出貨數</th>
-                            <th>有問題貨品</th>
-                            <th width='120'>營業額</th>
-                            <th width='120'>淨利潤</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>9/1</td>
-                            <td>300</td>
-                            <td>1</td>
-                            <td>200</td>
-                            <td>3</td>
-                            <td>25,000</td>
-                            <td>10,500</td>
-                        </tr>
-                        <tr>
-                            <td>9/1</td>
-                            <td>300</td>
-                            <td>1</td>
-                            <td>200</td>
-                            <td>3</td>
-                            <td>5,000</td>
-                            <td>3,500</td>
-                        </tr>
-                        <tr>
-                            <td>9/1</td>
-                            <td>300</td>
-                            <td>1</td>
-                            <td>200</td>
-                            <td>3</td>
-                            <td>25,000</td>
-                            <td>10,500</td>
-                        </tr>
-                        <tr>
-                            <td>9/1</td>
-                            <td>300</td>
-                            <td>1</td>
-                            <td>200</td>
-                            <td>3</td>
-                            <td class="text-right">20,000</td>
-                            <td class="text-right">9,500</td>
-                        </tr>
-                    </tbody>
-                    <tfoot>
-                        <tr>
-                            <td colspan="5">總營業額</td>
-                            <td colspan="2">75,000</td>
-                        </tr>
-                        <tr>
-                            <td colspan="6">總利潤</td>
-                            <td>34,000</td>
-                        </tr>
-                    </tfoot>
-                </table>
+                        <thead>
+                            <tr>
+                                <th width='50'>日期</th>
+                                <th>訂單數</th>
+                                <th>退貨數</th>
+                                <th>出貨數</th>
+                                <th>有問題貨品</th>
+                                <th class="text-end" width='120'>營業額</th>
+                                <th class="text-end" width='120'>淨利潤</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>9/1</td>
+                                <td>300</td>
+                                <td>1</td>
+                                <td>200</td>
+                                <td>3</td>
+                                <td class="text-end">25,000</td>
+                                <td class="text-end">10,500</td>
+                            </tr>
+                            <tr>
+                                <td>9/1</td>
+                                <td>300</td>
+                                <td>1</td>
+                                <td>200</td>
+                                <td>3</td>
+                                <td class="text-end">5,000</td>
+                                <td class="text-end">3,500</td>
+                            </tr>
+                            <tr>
+                                <td>9/1</td>
+                                <td>300</td>
+                                <td>1</td>
+                                <td>200</td>
+                                <td>3</td>
+                                <td class="text-end">25,000</td>
+                                <td class="text-end">10,500</td>
+                            </tr>
+                            <tr>
+                                <td>9/1</td>
+                                <td>300</td>
+                                <td>1</td>
+                                <td>200</td>
+                                <td>3</td>
+                                <td class="text-end">20,000</td>
+                                <td class="text-end">9,500</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td class="text-end" colspan="6">總營業額</td>
+                                <td class="text-end" colspan="1">75,000</td>
+                            </tr>
+                            <tr>
+                                <td class="text-end" colspan="6">總利潤</td>
+                                <td class="text-end">34,000</td>
+                            </tr>
+                        </tfoot>
+                    </table>
                 </div>
-                
+
+            </div>
+        </div>
+        <div class="card mt-5">
+            <div class="card-header">訂單列表</div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <td class="fw-bold" width="14">#</td>
+                                <td class="fw-bold">品項</td>
+                                <td class="fw-bold">客戶</td>
+                                <td class="fw-bold">E-mail</td>
+                                <td class="fw-bold" width="100">狀態</td>
+                                <td class="fw-bold">金額</td>
+                                <td class="fw-bold" width="150">操作</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>手工肥皂</td>
+                                <td>Jack Cheng</td>
+                                <td>random@hotmail.com</td>
+                                <td>已出貨</td>
+                                <td>$1,500</td>
+                                <td>
+                                    <div class="btn-group btn-group-sm" role="group"
+                                        aria-label="Button group with nested dropdown">
+                                        <button type="button" class="btn btn-outline-secondary" data-bs-toggle="modal"
+                                            data-title="編輯" data-product="手工肥皂" data-bs-target="#editBackdrop">編輯</button>
+                                        <button type="button" class="btn btn-outline-secondary" data-bs-toggle="modal"
+                                            data-title="查看" data-product="手工肥皂" data-bs-target="#reviewBackdrop">查看</button>
+
+                                        <div class="btn-group" role="group">
+                                            <button id="btnGroupDrop1" type="button"
+                                                class="btn btn-outline-secondary dropdown-toggle"
+                                                data-bs-toggle="dropdown" aria-expanded="false">
+                                                ...
+                                            </button>
+                                            <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                                                <li><a class="dropdown-item" href="#">操作記錄</a></li>
+                                                <li><a class="dropdown-item" href="#">資料匯出</a></li>
+                                                <li>
+                                                    <hr class="dropdown-devider">
+                                                </li>
+                                                <li><a class="dropdown-item text-danger" data-bs-toggle="modal" data-bs-target="#deleteModal" data-title="刪除" data-product="手工肥皂" href="#">刪除</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="7">...</td>
+                            </tr>
+                            <tr>
+                                <td colspan="7">...</td>
+                            </tr>
+                            <tr>
+                                <td colspan="7">...</td>
+                            </tr>
+                            <tr>
+                                <td colspan="7">...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- Modal -->
+    <!-- Edit Modal -->
+    <div class="modal fade" id="editBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <label for="memo">備註您想要的香味：</label>
+                    <select name="perfume" id="memo">
+                        <option value="rose">玫瑰</option>
+                        <option value="cedar">雪松</option>
+                        <option value="lemon">檸檬</option>
+                        <option value="ocean">海洋</option>
+                    </select>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">確定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Review Modal -->
+    <div class="modal fade" id="reviewBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-dark text-light">
+                    <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Delete Modal -->
+    <div class="modal fade" id="deleteModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-danger text-light">
+                    <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-outline-danger">刪除</button>
+                </div>
             </div>
         </div>
     </div>
@@ -195,6 +326,34 @@
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
     <script src="js/all.js"></script>
+    <script>
+        let editBackdrop = document.getElementById('editBackdrop');
+        editBackdrop.addEventListener('show.bs.modal', function (e) {
+            let btn = event.relatedTarget;
+            let reci = btn.getAttribute('data-title');
+            let product = btn.getAttribute('data-product');
+            let modalTitle = editBackdrop.querySelector('.modal-title');
+            modalTitle.textContent = reci + product;
+        })
+        let reviewBackdrop = document.getElementById('reviewBackdrop');
+        reviewBackdrop.addEventListener('show.bs.modal', function(e){
+            let btn = e.relatedTarget;
+            let reci = btn.getAttribute('data-title');
+            let product = btn.getAttribute('data-product');
+            let modalTitle = reviewBackdrop.querySelector('.modal-title');
+            modalTitle.textContent = reci + product;
+        })
+        let deleteModal = document.getElementById('deleteModal');
+        deleteModal.addEventListener('show.bs.modal', function(e){
+            let btn = e.relatedTarget;
+            let reci = btn.getAttribute('data-title');
+            let product = btn.getAttribute('data-product');
+            let modalTitle = deleteModal.querySelector('.modal-title');
+            modalTitle.textContent = reci + product;
+            let modalContent = deleteModal.querySelector('.modal-body');
+            modalContent.textContent = '確定要刪除' + product + '嗎？';
+        })
+    </script>
 </body>
 
 </html>

@@ -64,8 +64,10 @@
                         <td>
                             <div class="btn-group btn-group-sm" role="group"
                                 aria-label="Button group with nested dropdown">
-                                <button type="button" class="btn btn-outline-secondary" data-bs-toggle="modal" data-title="編輯" data-bs-target="#editBackdrop">編輯</button>
-                                <button type="button" class="btn btn-outline-secondary">查看</button>
+                                <button type="button" class="btn btn-outline-secondary" data-bs-toggle="modal"
+                                    data-title="編輯" data-bs-target="#editBackdrop">編輯</button>
+                                <button type="button" class="btn btn-outline-secondary" data-bs-toggle="modal"
+                                    data-title="查看" data-bs-target="#editBackdrop">查看</button>
 
                                 <div class="btn-group" role="group">
                                     <button id="btnGroupDrop1" type="button"
@@ -85,9 +87,6 @@
                             </div>
                         </td>
                     </tr>
-                    <!-- <tr>
-                        <td colspan="7">...</td>
-                    </tr>
                     <tr>
                         <td colspan="7">...</td>
                     </tr>
@@ -96,13 +95,36 @@
                     </tr>
                     <tr>
                         <td colspan="7">...</td>
-                    </tr> -->
+                    </tr>
+                    <tr>
+                        <td colspan="7">...</td>
+                    </tr>
                 </tbody>
             </table>
         </div>
     </div>
     <!-- Modal -->
+    <!-- Edit Modal -->
     <div class="modal fade" id="editBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Understood</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Review Modal -->
+    <div class="modal fade" id="reviewBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
         aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -127,12 +149,19 @@
     <script src="js/all.js"></script>
     <script>
         let editBackdrop = document.getElementById('editBackdrop');
-        editBackdrop.addEventListener('show.bs.modal', function(e){
+        editBackdrop.addEventListener('show.bs.modal', function (e) {
             let btn = event.relatedTarget;
             let reci = btn.getAttribute('data-title');
             let modalTitle = editBackdrop.querySelector('.modal-title')
+            modalTitle.textContent = reci;
         })
-
+        let reviewBackdrop = document.getElementById('reviewBackdrop');
+        reviewBackdrop.addEventListener('show.bs.modal', function(e){
+            let btn = e.relatedTarget;
+            let reci = btn.getAttribute('data-title');
+            let modalTitle = reviewBackdrop.querySelector('.modal-title');
+            modalTitle = reci;
+        })
     </script>
 </body>
 

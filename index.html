@@ -240,6 +240,39 @@
                                 </td>
                             </tr>
                             <tr>
+                                <td>1</td>
+                                <td>精油</td>
+                                <td>Jack Cheng</td>
+                                <td>random@hotmail.com</td>
+                                <td>已出貨</td>
+                                <td>$1,500</td>
+                                <td>
+                                    <div class="btn-group btn-group-sm" role="group"
+                                        aria-label="Button group with nested dropdown">
+                                        <button type="button" class="btn btn-outline-secondary" data-bs-toggle="modal"
+                                            data-title="編輯" data-product="精油" data-bs-target="#editBackdrop">編輯</button>
+                                        <button type="button" class="btn btn-outline-secondary" data-bs-toggle="modal"
+                                            data-title="查看" data-product="精油" data-bs-target="#reviewBackdrop">查看</button>
+
+                                        <div class="btn-group" role="group">
+                                            <button id="btnGroupDrop1" type="button"
+                                                class="btn btn-outline-secondary dropdown-toggle"
+                                                data-bs-toggle="dropdown" aria-expanded="false">
+                                                ...
+                                            </button>
+                                            <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                                                <li><a class="dropdown-item" href="#">操作記錄</a></li>
+                                                <li><a class="dropdown-item" href="#">資料匯出</a></li>
+                                                <li>
+                                                    <hr class="dropdown-devider">
+                                                </li>
+                                                <li><a class="dropdown-item text-danger" data-bs-toggle="modal" data-bs-target="#deleteModal" data-title="刪除" data-product="精油" href="#">刪除</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
                                 <td colspan="7">...</td>
                             </tr>
                             <tr>
@@ -269,13 +302,8 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <label for="memo">備註您想要的香味：</label>
-                    <select name="perfume" id="memo">
-                        <option value="rose">玫瑰</option>
-                        <option value="cedar">雪松</option>
-                        <option value="lemon">檸檬</option>
-                        <option value="ocean">海洋</option>
-                    </select>
+                    <label for="memo">備註</label>
+                    <input type="text" name="memo" id="memo">
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -342,6 +370,8 @@
             let product = btn.getAttribute('data-product');
             let modalTitle = reviewBackdrop.querySelector('.modal-title');
             modalTitle.textContent = reci + product;
+            let modalContent = reviewBackdrop.querySelector('.modal-body');
+            modalContent.textContent = product;
         })
         let deleteModal = document.getElementById('deleteModal');
         deleteModal.addEventListener('show.bs.modal', function(e){
